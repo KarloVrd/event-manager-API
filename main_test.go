@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -319,8 +318,6 @@ func TestGetALLMeetings(t *testing.T) {
 	var response Response
 	json.Unmarshal(resp.Body.Bytes(), &response)
 	meetings := response.MeetingResponse
-
-	fmt.Println(response)
 
 	// test response
 	assert.Equal(t, 1, len(meetings))

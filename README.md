@@ -7,7 +7,7 @@ It is written in Golang and uses Gin framework for routing and Gorm for ORM.
 To install this API locally, follow these steps:
 1. **Clone the repository**: Begin by cloning the repository to your local machine. You can use the following command:
     ```bash
-    git clone github.com/KarloVrd/event-manager-API
+    git clone https://github.com/KarloVrd/event-manager-API.git
 2. **Navigate to the project directory**: Change your current working directory to the root of the cloned repository:
     ```bash
     cd event-manager-API
