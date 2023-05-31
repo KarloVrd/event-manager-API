@@ -29,17 +29,20 @@ func CheckMeetingStatus(meetingID uint) {
 			allAccepted = false
 		}
 	}
-	// get meeting
-	meeting, _ := models.GetMeetingByID(meetingID)
-
+	var status string
 	// set meeting status
 	if allAccepted {
-		meeting.Status = "scheduled"
+		status = "scheduled"
 	} else if anyRejected {
-		meeting.Status = "cancelled"
+		status = "cancelled"
 	} else {
 		return
 	}
+
+	// get meeting
+	meeting, _ := models.GetMeetingByID(meetingID)
+	meeting.Status = status
+
 	models.DB.Save(&meeting)
 }
 

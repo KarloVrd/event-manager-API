@@ -26,3 +26,4 @@ You can also run already written test at main_test.go:
 ```bash
 go test
 ```
+If you want to reset database, you can manually delete ```event-manager.db``` and empty one will be created after running the server. ```test.db``` database will reset before each testing, but tests depend on each other, so you can't run them individually.
